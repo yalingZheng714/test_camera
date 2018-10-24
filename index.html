@@ -1,0 +1,424 @@
+<html>
+<head>
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery Mobile</title>
+<link rel="stylesheet" href="jquery.mobile.css" />
+<script src="jquery.js"></script>
+<script src="jquery.mobile.js"></script>
+</head>
+<body>
+
+<!-- Page: home  -->
+<div data-role="page" id="home">
+	<div data-role="header" data-add-back-btn="true" data-back-btn-text="上一頁">
+		<h1>About Us</h1>
+	</div>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/RGmlYqqTK_4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+	<div data-role="main" class="ui-content">
+	<h3>Office Location</h3>
+	<div id="map"></div>
+	<div id="contact"><a href="#page2" data-role="button" data-mini="ture">contact us</a></div>
+	<div id="contact"><a href="#page3" data-role="button" data-mini="ture">google 表單</a></div>
+		
+<style type="text/css">
+#map{
+	height: 400px;
+    width: 100%;
+}
+
+</style>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfACriV22GW9TqJBSW_gBDgdRbvpN6awY&callback=initMap">
+</script>
+<script>
+
+function initMap() {
+  // The location of Ul
+  var place = {lat: 25.126569, lng: 121.498575};
+  
+  var contentString = '<div id="content">'+
+      '<h3>優力</h3> '+
+      '<p>國際安全認證</>'+
+      '</div>';
+
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+  
+  
+  // The map, centered at place
+  var map = new google.maps.Map(
+      document.getElementById("map"), {zoom: 16, center: place});
+  // The marker, positioned at place
+  var marker = new google.maps.Marker({position: place, map: map});
+  
+  
+  marker.addListener("click", function() {
+    infowindow.open(map, marker);
+  });
+}
+</script>
+
+	</div>
+	
+	<div data-role="footer">
+		<h4>UL</h4>
+	</div>
+</div>
+
+<!-- Page: page1 -->
+<div data-role="page" id="page1">
+
+	<div data-role="header">
+		<h1>DGZW
+		<div id="pic2"><img src="images_s/list_icon.png" ></div></h1>
+	</div> 
+	
+	<div data-role="main" class="ui-content">
+		
+	<div id="pic"><img src="images_s/15.jpg" alt="All year round lighting string"  width="500" height="377" ></div>
+	
+	  
+	  <div id="area1"></div>
+	  <div id="area1_big">
+	    <p>Main wire requirement</p>
+	    <p>Min. wire size 18 AWG</p>
+        <p>Min wire grade SJ</p>
+        <p>Listed wire, rated 105 degree C, VW-1</p></div>
+	 
+	  <div id="area2"></div>
+	  <div id="area2_big">
+	    <p> T-shaped connector</p>
+	    <p>use QMFZ2 material, rated V-0</p>
+        <p>The Min. thickness should comply with the plastic certified Min. requirement</p>
+       </div>
+
+      <div id="area3"></div>
+	  <div id="area3_big">
+        <p>Drop wire</p>
+	    <p>Min. wire size 18 AWG</p>
+        <p>Min wire grade SPT-2</p>
+        <p>Listed wire, rated 105 degree C, VW-1</p>
+       </div>
+
+      <div id="area4"></div>
+	  <div id="area4_big">
+        <p>Lampholder husk</p>
+	    <p>DGZE2/8 or ONHR</p>
+       </div>
+
+      <div id="area5"></div>
+	  <div id="area5_big">
+	    <p>Lamp</p>
+        <p>DGXO or DGXO7</p>
+		<p>maximum wattage for single lamp should be 40 W</p>
+		<p>maximum number of lamp depend on the wire size and fuse</p>
+       </div>
+
+
+	<script>
+	window.onload = function(){ hide_all(); }
+     document.getElementById('area1').onclick=function(){show('area1_big');}
+     
+     document.getElementById('area2').onclick=function(){show('area2_big');}
+     
+     document.getElementById('area3').onclick=function(){show('area3_big');}
+     
+     document.getElementById('area4').onclick=function(){show('area4_big');}
+     
+     document.getElementById('area5').onclick=function(){show('area5_big');}
+     
+
+     function show(str)
+     {
+	   var obj = document.getElementById(str);
+	   if(obj.style.display=="none")
+	   {
+	   	obj.style.display="block";
+	   }
+	   else{
+	   obj.style.display = 'none';}
+     }
+
+function hide_all()
+{
+	document.getElementById('area1_big').style.display = 'none';
+	document.getElementById('area2_big').style.display = 'none';
+	document.getElementById('area3_big').style.display = 'none';
+	document.getElementById('area4_big').style.display = 'none';
+	document.getElementById('area5_big').style.display = 'none';
+}
+
+
+     function hide(str)
+     {
+	   var obj = document.getElementById(str);
+	   obj.style.display = 'none';
+      }
+	</script>  
+
+	  
+   
+   <style type="text/css">
+ 
+   #pic  {
+  position: relative;
+  display: block;
+  }
+
+   #pic2{
+
+   	width:60px;
+   	height: 60px;
+   	float:right; 
+   }
+
+#area1{
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	left: 50px;
+	top:100px;
+	cursor: pointer;
+}
+
+#area1_big{
+	position: absolute;
+	width: 300px;
+	height: 190px;
+	left: 100px;
+	top:100px;
+	background-color: #F0F8FF;
+}
+
+#area1:hover{
+	
+}
+
+#area2 {
+  width: 60px;
+height: 60px;
+  position: absolute;
+  left: 250px;
+  top: 100px;
+  cursor: pointer;
+}
+
+#area2_big{
+	position: absolute;
+	width: 300px;
+	height: 220px;
+	left: 100px;
+	top:160px;
+	background-color: #f0f8ff;
+}
+#area3 {
+  width: 60px;
+  height: 50px;
+  position: absolute;
+  left: 230px;
+  top: 170px;
+  cursor: pointer;
+}
+#area3_big{
+	position: absolute;
+	width: 300px;
+	height: 190px;
+	left: 50px;
+	top:300px;
+	background-color: #f0f8ff;
+}
+#area4 {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 240px;
+  top: 250px;
+  cursor: pointer;
+}
+
+#area4_big{
+	position: absolute;
+	width: 300px;
+	height: 77px;
+	left: 150px;
+	top:300px;
+	background-color: #f0f8ff;
+}
+
+#area5 {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 230px;
+  top: 340px;
+  cursor: pointer;
+ 
+}
+
+#area5_big{
+	position: absolute;
+	width: 400px;
+	height: 220px;
+	left: 90px;
+	top:100px;
+	background-color: #f0f8ff;
+}
+</style>     
+
+	</div> 
+	
+	<div data-role="footer">
+		<h4>All year round lighting string</h4>
+	</div>
+
+	
+	
+</div> 
+
+
+
+
+
+
+<!-- Page: page3 -->
+<div data-role="page" id="page3">
+
+	<div data-role="header" data-add-back-btn="true" data-back-btn-text="上一頁">
+		<h1>T-shaped connector requirement</h1>
+	</div> 
+	
+	<div data-role="main" class="ui-content">
+		<h2>把問卷寫入Google試算表</h2>
+
+<form method="post" action="https://docs.google.com/spreadsheets/d/1hzzIVV77wPAVJJ2tv_QLOI0Qki8aUEWFPltTUB1B0w0/edit?usp=sharing" target="hidden_iframe">
+
+  <p><input type="hidden" name="type" value="W"></p>
+  <p>名字：<input type="text" name="name"></p>
+  <p>標題：<input type="text" name="title"></p>
+  <p>內容：<input type="text" name="content"></p>  
+  <p><input type="submit" value="送出資料"></p>
+</form>
+
+<iframe name="hidden_iframe"></iframe>
+
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+	</div> 
+	
+	<div data-role="footer">
+		<h4>All year round lighting string</h4>
+	</div>
+	
+</div>
+
+<!-- Page: page2 -->
+<div data-role="page" id="page2">
+
+
+<!DOCTYPE html>
+
+<head>
+  <meta charset=utf-8 />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <p>名字:<input type="text" id="input" name="name"value=""></p>
+  <p>標題:<input type="text" id="input1" name="title"value=""></p>
+  
+  <button type="button" id="btn">送出</button>
+
+  <ul id="ul">
+
+  </ul>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  // TODO: Replace with your project's customized code snippet
+  var config = {
+    apiKey: "AIzaSyBKMF6XS62VXhnY4h-2NvzrDeLHCoYY8YQ",
+    authDomain: "databasedemo-d521d.firebaseapp.com",
+    databaseURL: "https://databasedemo-d521d.firebaseio.com",
+    projectId: "databasedemo-d521d",
+    storageBucket: "databasedemo-d521d.appspot.com",
+    
+  };
+  firebase.initializeApp(config);
+  $(document).ready(function(){
+    var msgRef = firebase.database().ref('/message')
+    $('#btn').on('click',function(){
+      var msg = $('#input').val();
+      var msg2 = $('#input1').val();
+      var arr=["name",msg,"title",msg2];
+      
+      console.log(msg)
+      console.log(msg2)
+    msgRef.push({
+      message:arr
+    })
+    })
+
+   
+    
+
+    
+  })
+</script>
+
+<script src="scripts/main.js"></script>
+</body>
+</html>
+
+  
+<!-- Page: page4 -->
+<div data-role="page" id="page4">
+
+	<div data-role="header" data-add-back-btn="true" data-back-btn-text="上一頁">
+		<h1>Lampholder husk requirement</h1>
+	</div>
+	
+	<div data-role="main" class="ui-content">
+		<p><img src="images_s/18.jpg" alt="Lampholder husk"  width="500" height="377"></p>
+		<p>DGZE2/8 or ONHR</p>
+        
+	</div>
+	
+	<div data-role="footer">
+		<h4>All year round lighting string</h4>
+	</div>
+	
+</div>
+
+<!-- Page: page5 -->
+<div data-role="page" id="page5">
+
+	<div data-role="header" data-add-back-btn="true" data-back-btn-text="上一頁">
+		<h1>Lamp requirement</h1>
+	</div>
+	
+	<div data-role="main" class="ui-content">
+		<p><img src="images_s/19.jpg" alt="Lamp"  width="500" height="377"></p>
+		<p>DGXO or DGXO7</p>
+		<p>maximum wattage for single lamp should be 40 W</p>
+		<p>maximum number of lamp depend on the wire size and fuse</p>
+        
+	</div>
+	
+	<div data-role="footer">
+		<h4>All year round lighting string</h4>
+	</div>
+	
+</div>
+
+</body>
+</html>

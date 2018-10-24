@@ -1,0 +1,331 @@
+<html>
+<head>
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery Mobile</title>
+<link rel="stylesheet" href="jquery.mobile.css" />
+<script src="jquery.js"></script>
+<script src="jquery.mobile.js"></script>
+</head>
+<body>
+
+<!-- Page: home  -->
+<div data-role="page" id="home">
+
+	<div data-role="header">
+		<h1>DGZW
+		<div id="pic2"><img src="images_s/list_icon.png" ></div></h1>
+	</div> 
+	
+	<div data-role="main" class="ui-content">
+		
+	<div id="pic"><img src="images_s/15.jpg" alt="All year round lighting string"  width="500" height="377" ></div>
+	
+	  
+	  <div id="area1"></div>
+	  <div id="area1_big">
+	    <p>Main wire requirement</p>
+	    <p>Min. wire size 18 AWG</p>
+        <p>Min wire grade SJ</p>
+        <p>Listed wire, rated 105 degree C, VW-1</p></div>
+	 
+	  <div id="area2"></div>
+	  <div id="area2_big">
+	    <p> T-shaped connector</p>
+	    <p>use QMFZ2 material, rated V-0</p>
+        <p>The Min. thickness should comply with the plastic certified Min. requirement</p>
+       </div>
+
+      <div id="area3"></div>
+	  <div id="area3_big">
+        <p>Drop wire</p>
+	    <p>Min. wire size 18 AWG</p>
+        <p>Min wire grade SPT-2</p>
+        <p>Listed wire, rated 105 degree C, VW-1</p>
+       </div>
+
+      <div id="area4"></div>
+	  <div id="area4_big">
+        <p>Lampholder husk</p>
+	    <p>DGZE2/8 or ONHR</p>
+       </div>
+
+      <div id="area5"></div>
+	  <div id="area5_big">
+	    <p>Lamp</p>
+        <p>DGXO or DGXO7</p>
+		<p>maximum wattage for single lamp should be 40 W</p>
+		<p>maximum number of lamp depend on the wire size and fuse</p>
+       </div>
+
+
+	<script>
+	window.onload = function(){ hide_all(); }
+     document.getElementById('area1').onmouseover=function(){show('area1_big');}
+     document.getElementById('area1').onmouseout=function(){hide('area1_big');}
+     document.getElementById('area2').onmouseover=function(){show('area2_big');}
+     document.getElementById('area2').onmouseout=function(){hide('area2_big');}
+     document.getElementById('area3').onmouseover=function(){show('area3_big');}
+     document.getElementById('area3').onmouseout=function(){hide('area3_big');}
+     document.getElementById('area4').onmouseover=function(){show('area4_big');}
+     document.getElementById('area4').onmouseout=function(){hide('area4_big');}
+     document.getElementById('area5').onmouseover=function(){show('area5_big');}
+     document.getElementById('area5').onmouseout=function(){hide('area5_big');}
+
+     function show(str)
+     {
+	   var obj = document.getElementById(str);
+	   obj.style.display = 'block';
+     }
+
+function hide_all()
+{
+	document.getElementById('area1_big').style.display = 'none';
+	document.getElementById('area2_big').style.display = 'none';
+	document.getElementById('area3_big').style.display = 'none';
+	document.getElementById('area4_big').style.display = 'none';
+	document.getElementById('area5_big').style.display = 'none';
+}
+
+
+     function hide(str)
+     {
+	   var obj = document.getElementById(str);
+	   obj.style.display = 'none';
+      }
+	</script>  
+
+	  
+   
+   <style type="text/css">
+ 
+   #pic  {
+  position: relative;
+  display: block;
+  }
+
+   #pic2{
+
+   	width:60px;
+   	height: 60px;
+   	float:right; 
+   }
+
+#area1{
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	left: 50px;
+	top:100px;
+
+}
+
+#area1_big{
+	position: absolute;
+	width: 300px;
+	height: 190px;
+	left: 100px;
+	top:100px;
+	background-color: #F0F8FF;
+}
+
+#area1:hover{
+	
+}
+
+#area2 {
+  width: 60px;
+height: 60px;
+  position: absolute;
+  left: 250px;
+  top: 100px;
+  cursor: pointer;
+}
+
+#area2_big{
+	position: absolute;
+	width: 300px;
+	height: 220px;
+	left: 100px;
+	top:160px;
+	background-color: #f0f8ff;
+}
+#area3 {
+  width: 60px;
+  height: 50px;
+  position: absolute;
+  left: 230px;
+  top: 170px;
+  cursor: pointer;
+}
+#area3_big{
+	position: absolute;
+	width: 300px;
+	height: 190px;
+	left: 50px;
+	top:200px;
+	background-color: #f0f8ff;
+}
+#area4 {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 240px;
+  top: 250px;
+  cursor: pointer;
+}
+
+#area4_big{
+	position: absolute;
+	width: 300px;
+	height: 77px;
+	left: 150px;
+	top:300px;
+	background-color: #f0f8ff;
+}
+
+#area5 {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 230px;
+  top: 340px;
+  cursor: pointer;
+ 
+}
+
+#area5_big{
+	position: absolute;
+	width: 400px;
+	height: 220px;
+	left: 90px;
+	top:100px;
+	background-color: #f0f8ff;
+}
+</style>     
+
+
+
+		
+	</div> 
+	
+	<div data-role="footer">
+		<h4>All year round lighting string</h4>
+	</div>
+
+	
+	
+</div> 
+
+
+
+<!-- Page: page1 -->
+<div data-role="page" id="page1">
+
+	<div data-role="header" data-add-back-btn="true" data-back-btn-text="上一頁">
+		<h1>Main wire requirement</h1>
+	</div>
+	
+	<div data-role="main" class="ui-content">
+		<p>
+        <img src="images_s/14.jpg" alt="SJ type wire"  width="500" height="377">
+        </p>
+
+        <p>Min. wire size 18 AWG</p>
+        <p>Min wire grade SJ</p>
+        <p>Listed wire, rated 105 degree C, VW-1</p>
+
+	</div>
+	
+	<div data-role="footer">
+		<h4>All year round lighting string</h4>
+	</div>
+	
+</div>
+
+
+
+<!-- Page: page2 -->
+<div data-role="page" id="page2">
+
+	<div data-role="header" data-add-back-btn="true" data-back-btn-text="上一頁">
+		<h1>T-shaped connector requirement</h1>
+	</div> 
+	
+	<div data-role="main" class="ui-content">
+		<p>
+        <img src="images_s/16.jpg" alt="SJ type wire"  width="400" height="377">
+        </p>
+        <p>use QMFZ2 material, rated V-0</p>
+        <p>The Min. thickness should comply with the plastic certified Min. requirement</p>
+
+	</div> 
+	
+	<div data-role="footer">
+		<h4>All year round lighting string</h4>
+	</div>
+	
+</div>
+
+<!-- Page: page3 -->
+<div data-role="page" id="page3">
+
+	<div data-role="header" data-add-back-btn="true" data-back-btn-text="上一頁">
+		<h1>Drop Wire requirement</h1>
+	</div>
+	
+	<div data-role="main" class="ui-content">
+		<p><img src="images_s/17.jpg" alt="SJ type wire"  width="500" height="377"></p>
+		<p>Min. wire size 18 AWG</p>
+        <p>Min wire grade SPT-2</p>
+        <p>Listed wire, rated 105 degree C, VW-1</p>
+	</div>
+	
+	<div data-role="footer">
+		<h4>All year round lighting string</h4>
+	</div>
+	
+</div>
+
+<!-- Page: page4 -->
+<div data-role="page" id="page4">
+
+	<div data-role="header" data-add-back-btn="true" data-back-btn-text="上一頁">
+		<h1>Lampholder husk requirement</h1>
+	</div>
+	
+	<div data-role="main" class="ui-content">
+		<p><img src="images_s/18.jpg" alt="Lampholder husk"  width="500" height="377"></p>
+		<p>DGZE2/8 or ONHR</p>
+        
+	</div>
+	
+	<div data-role="footer">
+		<h4>All year round lighting string</h4>
+	</div>
+	
+</div>
+
+<!-- Page: page5 -->
+<div data-role="page" id="page5">
+
+	<div data-role="header" data-add-back-btn="true" data-back-btn-text="上一頁">
+		<h1>Lamp requirement</h1>
+	</div>
+	
+	<div data-role="main" class="ui-content">
+		<p><img src="images_s/19.jpg" alt="Lamp"  width="500" height="377"></p>
+		<p>DGXO or DGXO7</p>
+		<p>maximum wattage for single lamp should be 40 W</p>
+		<p>maximum number of lamp depend on the wire size and fuse</p>
+        
+	</div>
+	
+	<div data-role="footer">
+		<h4>All year round lighting string</h4>
+	</div>
+	
+</div>
+
+</body>
+</html>

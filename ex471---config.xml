@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+		xmlns:gap   = "http://phonegap.com/ns/1.0"
+		id	    = "tw.company.Claire.project"
+		versionCode = "1" 
+		version     = "0.1.0" >
+ 
+	<name>DGZW</name>
+ 
+	<description>
+		Brief introduction of DGZW
+	</description>
+ 
+	<author href="https://www.ul.com/" email="claire.zheng@ul.com">
+		Claire.zheng
+	</author>
+	
+	<icon src="string.jpg" />
+	
+	<!-- current version of PhoneGap -->
+	
+	<preference name='phonegap-version' value='cli-8.0.0' />
+	
+	<!-- 設定畫面固定為水平(landscape)、垂直(portrait) -->
+	<preference name="orientation" value="portrait" />
+
+	<!-- 加入其它plugin設定 -->
+	
+</widget>
