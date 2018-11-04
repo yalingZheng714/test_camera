@@ -8,27 +8,161 @@
 <script src="jquery.mobile.js"></script>
 </head>
 <body>
-
-<!-- Page: home  -->
+<!-- Page: home -->
 <div data-role="page" id="home">
+
+	<div data-role="header" data-add-back-btn="true" data-back-btn-text="">	
+	</div>
+	
+	<div class="gallery">
+		<a target="" href="#page1"><img src="images_s/20.png" width="200" height="200"></a>
+	    <div class="desc">關於我</div>
+	</div>
+
+	<div class="gallery">
+		<a target="" href="#page2"><img src="images_s/21.png" width="200" height="200"></a>
+	    <div class="desc">產品類別介紹</div>
+	</div>
+
+    <div class="gallery">
+		<a target="" href="#page4"><img src="images_s/22.png" width="200" height="200"></a>
+	    <div class="desc">詢價</div>
+	</div>
+
+   <div class="gallery">
+		<a target="" href="#page5"><img src="images_s/23.png" width="200" height="200"></a>
+	    <div class="desc">掃描產品</div>
+	</div>
+
+    <div class="gallery">
+		<a target="" href="#page4"><img src="images_s/24.png" width="200" height="200"></a>
+	    <div class="desc">聯繫我們</div>
+	</div>
+
+	
+	<div data-role="footer">
+		<h4>All year round lighting string</h4>
+	</div>
+
+	<style type="text/css">
+	div.gallery{
+		margin: 5px;
+        border: 1px solid #ccc;
+        float: left;
+        width: 180px;
+   
+         top:200px;
+
+	}
+
+	div.gallery:hover{
+		border: 1px solid #777;
+	}
+
+	div.gallery img{
+		width:100%;
+		height: auto;
+
+	}
+
+	div.desc{
+		padding: 10px;
+		text-align:center;
+	}
+	</style>
+
+	
+</div>
+
+
+<!-- Page: page1  -->
+<div data-role="page" id="page1">
 	<div data-role="header" data-add-back-btn="true" data-back-btn-text="上一頁">
-		<h1>About Us</h1>
+		<h1>關於UL</h1>
 	</div>
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/RGmlYqqTK_4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 	<div data-role="main" class="ui-content">
 	<h3>Office Location</h3>
 	<div id="map"></div>
-	<div id="contact"><a href="#page1" data-role="button" data-mini="ture">DGZW</a></div>
-	<div id="contact"><a href="#page2" data-role="button" data-mini="ture">contact us</a></div>
-	<div id="contact"><a href="#page3" data-role="button" data-mini="ture">google 表單</a></div>
-		
+	
+	<ul>
+    <li><a href="#home">首頁</a></li>
+    <li><a href="#page2">產品類別介紹</a></li>
+    <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+     <div class="dropdown-content">
+       <a href="#">Link 1</a>
+       <a href="#">Link 2</a>
+       <a href="#">Link 3</a>
+     </div>
+    </li>
+    </ul>
+
+</body>
+</html>
 <style type="text/css">
 #map{
 	height: 400px;
     width: 100%;
 }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
 
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+    bottom:50px;
+    
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 </style>
 <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfACriV22GW9TqJBSW_gBDgdRbvpN6awY&callback=initMap">
@@ -64,13 +198,63 @@ function initMap() {
 
 	</div>
 	
-	<div data-role="footer">
-		<h4>UL</h4>
+	
+</div>
+<!-- Page: page2 -->
+<div data-role="page" id="page2">
+
+	<div data-role="header" data-add-back-btn="true" data-back-btn-text="上一頁">
+		<h1>您的產品長得像下列哪一個?</h1>
 	</div>
+	
+	
+    <div class="gallery">
+		<a target="" href="#page7"><img src="images_s/dgzw.jpg" width="200" height="200"></a>
+	    <div class="desc">CCN:DGZW</div>
+	</div>
+
+	 <div class="gallery">
+		<a target="" href="#page7"><img src="images_s/dgzw_no drop wire.jpg" width="200" height="200"></a>
+	    <div class="desc">CCN:DGZW</div>
+	</div>
+
+		
+	
+	<div data-role="footer">
+		<h4>All year round lighting string</h4>
+	</div>
+	
+	<style type="text/css">
+	div.gallery{
+		margin: 5px;
+        border: 1px solid #ccc;
+        float: left;
+        width: 180px;
+   
+         top:200px;
+
+	}
+
+	div.gallery:hover{
+		border: 1px solid #777;
+	}
+
+	div.gallery img{
+		width:100%;
+		height: auto;
+
+	}
+
+	div.desc{
+		padding: 10px;
+		text-align:center;
+	}
+	</style>
 </div>
 
-<!-- Page: page1 -->
-<div data-role="page" id="page1">
+
+<!-- Page: page7 -->
+<div data-role="page" id="page7">
 
 	<div data-role="header">
 		<h1>DGZW
@@ -319,8 +503,8 @@ height: 60px;
 	
 </div>
 
-<!-- Page: page2 -->
-<div data-role="page" id="page2">
+<!-- Page: page4 -->
+<div data-role="page" id="page4">
 
 
 <!DOCTYPE html>
@@ -380,9 +564,45 @@ height: 60px;
 </body>
 </html>
 
-  
-<!-- Page: page4 -->
-<div data-role="page" id="page4">
+ <!-- Page: page5 -->
+<div data-role="page" id="page5">
+
+	<div data-role="header" data-add-back-btn="true" data-back-btn-text="上一頁">
+		<h1>掃描QR Code</h1>
+	</div>
+	
+	<div data-role="main" class="ui-content">
+		<p><img src="images_s/18.jpg" alt="Lampholder husk"  width="500" height="377"></p>
+		<p>DGZE2/8 or ONHR</p>
+        
+	</div>
+	<script src="cordova.js"></script>
+	<script>
+	function openScanner(){
+		cordova.plugins.barcodeScanner.scan(
+			function(result){
+
+			}
+			function(error){
+				setMyLogs({"type":"errorScanner","msg":error});
+				alert("掃描程式錯誤。\n請擷取畫面向開發人員通報。");
+			}
+
+			);
+	}
+
+	</script>
+    <a onclick="openScanner()">掃描</a>
+
+	<div data-role="footer">
+		<h4>All year round lighting string</h4>
+	</div>
+	
+</div>
+
+
+<!-- Page: page8 -->
+<div data-role="page" id="page8">
 
 	<div data-role="header" data-add-back-btn="true" data-back-btn-text="上一頁">
 		<h1>Lampholder husk requirement</h1>
@@ -400,26 +620,7 @@ height: 60px;
 	
 </div>
 
-<!-- Page: page5 -->
-<div data-role="page" id="page5">
 
-	<div data-role="header" data-add-back-btn="true" data-back-btn-text="上一頁">
-		<h1>Lamp requirement</h1>
-	</div>
-	
-	<div data-role="main" class="ui-content">
-		<p><img src="images_s/19.jpg" alt="Lamp"  width="500" height="377"></p>
-		<p>DGXO or DGXO7</p>
-		<p>maximum wattage for single lamp should be 40 W</p>
-		<p>maximum number of lamp depend on the wire size and fuse</p>
-        
-	</div>
-	
-	<div data-role="footer">
-		<h4>All year round lighting string</h4>
-	</div>
-	
-</div>
 
 </body>
 </html>
